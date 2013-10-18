@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+     xmlns:songbird="http://www.songbirdnest.com/2007/addon-metadata-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>trackman@ericgebhart.com</em:id>
+    <em:type>2</em:type>
+    <em:name>trackman</em:name>
+    <em:version>2.0.0.0</em:version>
+    <em:creator>Eric Gebhart</em:creator>
+
+
+    <em:description>track meta data manipulator</em:description>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>songbird@songbirdnest.com</em:id>
+        <em:minVersion>1.8.0a</em:minVersion>
+        <em:maxVersion>2.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+        <!-- Nightingale -->
+<em:targetApplication>
+  <Description>
+    <em:id>nightingale@getnightingale.com</em:id>
+    <em:minVersion>1.11.0a</em:minVersion>
+    <em:maxVersion>2.0a</em:maxVersion>
+  </Description>
+</em:targetApplication>
+
+    <!-- Register a pane to be displayed below the service sidebar.
+         See http://wiki.songbirdnest.com/Developer/Articles/Getting_Started/Display_Panes -->
+    <songbird:displayPane>
+      <Description>
+        <songbird:contentTitle>trackman</songbird:contentTitle>
+        <songbird:contentUrl>chrome://trackman/content/pane.xul</songbird:contentUrl>
+        <songbird:contentIcon>chrome://trackman/skin/pane-icon.png</songbird:contentIcon>
+        <songbird:defaultWidth>300</songbird:defaultWidth>
+        <songbird:defaultHeight>100</songbird:defaultHeight>
+        <songbird:suggestedContentGroups>sidebar</songbird:suggestedContentGroups>
+        <songbird:showOnInstall>true</songbird:showOnInstall>
+      </Description>
+    </songbird:displayPane>
+
+
+
+  </Description>
+</RDF>

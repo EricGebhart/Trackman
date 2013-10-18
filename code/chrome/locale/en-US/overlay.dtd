@@ -1,0 +1,4 @@
+<!ENTITY trackman.helloworld.label "Do HelloWorld">
+<!ENTITY trackman.helloworld.accesskey "H">
+<!ENTITY trackman.pane.label "Trackman: metadata manipulator">
+<!ENTITY trackman.pane.button "Learn More">

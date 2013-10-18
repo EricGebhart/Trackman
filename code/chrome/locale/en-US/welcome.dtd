@@ -1,0 +1,32 @@
+<!ENTITY trackman.welcome.headline "Welcome to trackman!">
+<!ENTITY trackman.welcome.description "Trackman is a metadat manipulator. It allows for complex processing of multiple tracks.">
+<!ENTITY trackman.welcome.features "What trackman can do:">
+<!ENTITY trackman.welcome.feature1 "Swap Album Artist and artist.">
+<!ENTITY trackman.welcome.feature2 "Extract album artist and artist from the artist field.">
+<!ENTITY trackman.welcome.feature3 "Extract album artist, artist and composer from the track name">
+<!ENTITY trackman.welcome.feature4 "Trackman knows several patterns to do all of these extractions. (Parenthesis) and [Brackets] are understood.">
+<!ENTITY trackman.welcome.feature4_1 "Dash -, Canta, with, con, voc., feat. and featuring are also detected.">
+<!ENTITY trackman.welcome.feature4_2 "Various combinations of upper and lower case in the keywords are also handled.">
+<!ENTITY trackman.welcome.feature4_3 "Combinations of all of the above, keywords, brackets, parethesis also work..">
+<!ENTITY trackman.welcome.feature4_4 "In each of the examples below, the result will be Album Artist = Francisco Canaro, Artist = Roberto Maida. These examples are just a sampling of the basic patterns that Trackman will recognize when extracting album artist, artist or composer from artist or track name.">
+<!ENTITY trackman.welcome.feature5 "Repair last name, first name in album artist and artist.">
+<!ENTITY trackman.welcome.howtouse "How to use trackman?">
+<!ENTITY trackman.welcome.howtouse.description "To use trackman, select the tracks you wish to modify, check the items you wish to do and click the 'Update Library' button. Exercise caution in the beginning as you become familiar with the changes Trackman can make for you. With such a powerful tool it is not difficult to make mistakes.">
+<!ENTITY trackman.welcome.howtouse.noteaboutfocustrack "Please note: The use of add-ons which change the selection (e.g. FocusTrack) might be dangerous, since trackman always operates on the current selection. So make sure to disable them or at least make sure they do not change the selection unexpectedly. You can check more than one thing at a time, results can vary. Everything happens in the order of the checkbox menu, use carefully. Note that repair lastname first is redundant if extracting album artist and artist from artist.">
+<!ENTITY trackman.welcome.howtouse.tooltips "">
+<!ENTITY trackman.welcome.about "">
+<!ENTITY trackman.welcome.close "Close this window">
+
+<!ENTITY trackman.welcome.pattern1 "Francisco Canaro canta Roberto Maida">
+<!ENTITY trackman.welcome.pattern2 "Francisco Canaro with Roberto Maida">
+<!ENTITY trackman.welcome.pattern3 "Francisco Canaro featuring Roberto Maida">
+<!ENTITY trackman.welcome.pattern4 "Francisco Canaro feat. Roberto Maida">
+<!ENTITY trackman.welcome.pattern5 "Francisco Canaro (Roberto Maida)">
+<!ENTITY trackman.welcome.pattern6 "Francisco Canaro [Roberto Maida]">
+<!ENTITY trackman.welcome.pattern7 "Francisco Canaro (feat. Roberto Maida)">
+<!ENTITY trackman.welcome.pattern8 "Canaro, Francisco canta Roberto Maida">
+<!ENTITY trackman.welcome.pattern9 "Canaro, Francisco (Canta: Roberto Maida)">
+<!ENTITY trackman.welcome.pattern10 "Francisco Canaro - Roberto Maida">
+<!ENTITY trackman.welcome.pattern11 "Franscisco Canaro - (feat. Roberto Maida)">
+<!ENTITY trackman.welcome.pattern12 "Franscisco Canaro, voc. Roberto Maida)">
+
