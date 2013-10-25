@@ -11,20 +11,26 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="pane.js"/>
 
-  <vbox flex="1">
+      <!--
       <description value="&trackman.pane.label;" style="font-weight:bold;margin-left:2em;"/>
-    <groupbox style="margin:1em;margin-right:1em">
-      <button id="doit" label="Update Library" />
-      <checkbox id="onlyempty" label="Only update empty fields" checked="false"
-                style="margin-left:2em"/>
-      <button id="action-button" label="&trackman.pane.button;" />
-      <button id="clear-button" label="Clear all" />
+      -->
+    <toolbox>
+        <toolbar>
+      <toolbarbutton id="doit" label="Update Library" />
+      <toolbarbutton id="clear-button" label="Clear all" />
+      <toolbarbutton id="action-button" label="Help" />
+      </toolbar>
+    </toolbox>
+
+  <vbox style="margin-left:1em; margin-right:1em;" flex="1">
+    <groupbox>
+      <checkbox id="onlyempty" label="Update Empty Fields Only!" checked="false"/>
     </groupbox>
 
     <!-- AA=Album Artist, A=Artist -->
     <separator class="groove-thin" orient="vertical"/>
       <description value="Album Artist and Artist" style="font-weight:bold;margin-left:2em;"/>
-    <groupbox style="margin:1em;margin-right:1em">
+    <groupbox>
       <checkbox id="Swap-AA-A" label="Swap" checked="false"/>
       <checkbox id="AA-from-artist" label="Extract from Artist" checked="false"/>
       <checkbox id="clear-A-if-match" label="clear Artist if match" checked="false"/>
@@ -33,7 +39,6 @@
 
     <separator class="groove-thin" orient="vertical"/>
       <description value="Extract from Track name" style="font-weight:bold;margin-left:2em;"/>
-    <groupbox style="margin:1em;margin-right:1em">
       <radiogroup id="track-radio">
         <radio id="AA-from-track" label="Album Artist" selected="false"/>
         <radio id="A-from-track" label="Artist" selected="false"/>
@@ -41,7 +46,6 @@
         <radio id="genre-from-track" label="Genre" selected="false"/>
         <radio id="nothing-from-track" label="None" selected="true"/>
       </radiogroup>
-    </groupbox>
 
     <!--
     <separator class="groove-thin" orient="vertical"/>
@@ -54,14 +58,15 @@
 
     <separator class="groove-thin" orient="vertical"/>
 
-    <groupbox style="margin:1em;margin-right:1em">
-        <checkbox id="production-year-on-title" label="Add year to album title" checked="false" style="margin-left:2em"/>
-        <checkbox id="year-from-comment" label="Extract year from comment" checked="false" style="margin-left:2em"/>
+    <groupbox>
+        <checkbox id="production-year-on-title" label="Add year to album title" checked="false" />
+        <checkbox id="year-from-comment" label="Extract year from comment" checked="false" />
+        <checkbox id="swap-comment" label="Swap comment and Description" checked="false" />
     </groupbox>
 
     <separator class="groove-thin" orient="vertical"/>
 
-    <groupbox style="width:100%">
+    <groupbox>
         <vbox flex="1">
               <tabbox>
                 <tabs>

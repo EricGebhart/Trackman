@@ -68,6 +68,7 @@ Trackman.PaneController = {
     this.checkboxes.A_lastname_first = document.getElementById("A-lastname-first");
     this.checkboxes.production_year_on_title = document.getElementById("production-year-on-title");
     this.checkboxes.nothing_from_track = document.getElementById("nothing-from-track");
+    this.checkboxes.swap_comment = document.getElementById("swap-comment");
 
     this.checkboxes.clear_radio_field = document.getElementById("clear-radio-field");
 
@@ -109,6 +110,7 @@ Trackman.PaneController = {
        //this.checkboxes.A_lastname_first.setAttribute("checked", "false");
        this.checkboxes.production_year_on_title.setAttribute("checked", "false");
        this.checkboxes.onlyempty.setAttribute("checked", "false");
+       this.checkboxes.swap_comment.setAttribute("checked", "false");
 
        //Reset the extract from track radio buttons.
        document.getElementById("track-radio").selectedItem =
@@ -182,6 +184,10 @@ Trackman.PaneController = {
     }
     if(this.checkboxes.composer_from_track.selected == true){
         this.Split_track_into_track_and_composer();
+    }
+
+    if(this.checkboxes.swap_comment.getAttribute("checked") == "true"){
+        this.swap_comment_and_description();
     }
 
     // fix last name first.
@@ -360,6 +366,21 @@ Trackman.PaneController = {
           this.set_property(SBProperties.albumArtistName, artist);
       else
           this.set_property(SBProperties.albumArtistName, "");
+  },
+
+  swap_comment_and_description: function() {
+      var comment = this.current_item.getProperty(SBProperties.comment);
+      var description = this.current_item.getProperty(SBProperties.description);
+
+      if (comment)
+          this.set_property(SBProperties.description, comment);
+      else
+          this.set_property(SBProperties.description, "");
+
+      if (description)
+          this.set_property(SBProperties.comment, description);
+      else
+          this.set_property(SBProperties.comment, "");
   },
 
   // Extract album artist and artist from artist. Blank artist if none found.
